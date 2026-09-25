@@ -142,20 +142,8 @@ export default function CharacterCanvas({
 
       let imageToDraw;
 
-      if (!mousePosRef.current.active) {
-        // Natural ambient idle breathing/gaze when no pointer is active (mobile & idle)
-        const time = performance.now() * 0.0007; // Very gentle slow organic cycle
-        const ambientRadius = characterDim * 0.25;
-        const ambientX = faceScreenX + Math.cos(time) * ambientRadius;
-        const ambientY = faceScreenY + Math.sin(time * 0.8) * (ambientRadius * 0.5);
-        const targetAngle = Math.atan2(ambientY - faceScreenY, ambientX - faceScreenX);
-
-        smoothedAngleRef.current = lerpAngle(smoothedAngleRef.current, targetAngle, 0.06);
-        const frameIndex = angleToFrameIndex(smoothedAngleRef.current, 64);
-        imageToDraw = frames[frameIndex] || centerFrame;
-        lastDrawnFrameRef.current = frameIndex;
-      } else if (distance < deadzoneThreshold) {
-        // Cursor is inside the deadzone near face -> Direct eye contact!
+      if (!mousePosRef.current.active || distance < deadzoneThreshold) {
+        // Direct eye contact when idle, on initial load, or when cursor is near face
         isInDeadzoneRef.current = true;
         imageToDraw = centerFrame;
       } else {
