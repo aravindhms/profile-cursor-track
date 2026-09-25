@@ -4,6 +4,7 @@ import { X, ExternalLink, Mail, Copy, Check, Download, Briefcase, Code, Terminal
 export default function Modals({ activeModal, onClose }) {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
+  const [resumeView, setResumeView] = useState('structured'); // 'structured' | 'pdf'
 
   if (!activeModal) return null;
 
@@ -161,21 +162,25 @@ export default function Modals({ activeModal, onClose }) {
                       name: 'sd-dashboard',
                       desc: 'Real-time dashboard for Production Support & SRE teams to monitor system health, incidents, and KPIs.',
                       link: 'https://github.com/aravindhms/sd-dashboard',
+                      tags: ['React', 'SRE KPIs', 'Incident Ops'],
                     },
                     {
                       name: 'prod-support-automation-pack',
                       desc: 'Python & Shell scripts automating batch monitoring, auto-recovery routines, and routine support tasks.',
                       link: 'https://github.com/aravindhms/prod-support-automation-pack',
+                      tags: ['Python', 'UNIX Shell', 'Auto-Recovery'],
                     },
                     {
                       name: 'terminaldecoder',
                       desc: 'Command syntax & flag analyzer for Unix, Git, Terraform, Docker, and Kubernetes.',
                       link: 'https://github.com/aravindhms/terminaldecoder',
+                      tags: ['CLI Analyzer', 'Docker', 'Kubernetes'],
                     },
                     {
                       name: 'unixutils',
                       desc: 'Browser-based Unix sandbox & operational developer toolkit for regex testing and triage.',
                       link: 'https://github.com/aravindhms/unixutils',
+                      tags: ['Unix Sandbox', 'Regex Triage', 'DevOps'],
                     }
                   ].map((r) => (
                     <a
@@ -191,6 +196,13 @@ export default function Modals({ activeModal, onClose }) {
                           <ExternalLink className="w-3 h-3 text-white/40 group-hover:text-white transition-colors" />
                         </span>
                         <p className="text-[11px] text-white/70 mt-1 leading-relaxed">{r.desc}</p>
+                      </div>
+                      <div className="flex flex-wrap gap-1.5 mt-2.5 pt-2 border-t border-white/5">
+                        {r.tags.map((t) => (
+                          <span key={t} className="px-1.5 py-0.5 rounded text-[9px] font-mono bg-white/10 text-white/80">
+                            {t}
+                          </span>
+                        ))}
                       </div>
                     </a>
                   ))}
@@ -210,11 +222,11 @@ export default function Modals({ activeModal, onClose }) {
               <h2 className="text-2xl sm:text-3xl font-bold font-sans">Summary & Core Competencies</h2>
             </div>
 
-            {/* Official Summary */}
+            {/* Differentiated Engineering Philosophy */}
             <div className="p-4 rounded-2xl bg-white/[0.05] border border-white/15 text-white/90 text-sm leading-relaxed space-y-2">
-              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold block font-mono">Summary</span>
+              <span className="text-xs uppercase tracking-widest text-red-300 font-semibold block font-mono">Philosophy & Focus</span>
               <p>
-                Highly experienced SRE/Application Support Engineer with extensive experience in managing and automating mission-critical systems across FinTech, IT, Healthcare and Entertainment domains. Proven ability to drive continuous service improvement through proactive automation and expert L2/L3 support. Proficient in leveraging Python, Shell scripting, infrastructure-as-code, CI/CD pipelines, and rigorous adherence to ITIL practices.
+                Specialized in mission-critical reliability, zero-downtime operations, automated incident triage, and continuous service resilience across FinTech and enterprise architectures. Championing "automate once, protect forever", combining ITIL rigor with modern Cloud, Datadog/Splunk telemetry, and Infrastructure-as-Code tooling.
               </p>
             </div>
 
@@ -310,33 +322,69 @@ export default function Modals({ activeModal, onClose }) {
               </div>
             </div>
 
-            {/* Official PDF Resume Download Banner */}
-            <div className="p-4 rounded-2xl bg-white/[0.06] border border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-red-500/20 text-red-300">
-                  <FileText className="w-5 h-5" />
-                </div>
-                <div>
-                  <strong className="text-sm font-bold text-white block">Official Resume (Aravindh MS)</strong>
-                  <span className="text-xs text-white/60 font-mono">SRE & Application Support · Chennai (PDF · 258 KB)</span>
-                </div>
-              </div>
-              <a
-                href="/Aravindh_MS_Resume.pdf"
-                download="Aravindh_MS_Resume.pdf"
-                className="px-4 py-2 rounded-full bg-white text-neutral-900 hover:bg-neutral-100 text-xs font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-sm self-start sm:self-auto"
+            {/* View Selector Tabs */}
+            <div className="flex items-center gap-2 p-1 rounded-full bg-white/[0.06] border border-white/15 self-start">
+              <button
+                onClick={() => setResumeView('structured')}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                  resumeView === 'structured'
+                    ? 'bg-white text-neutral-900 font-semibold shadow-sm'
+                    : 'text-white/70 hover:text-white'
+                }`}
               >
-                <Download className="w-3.5 h-3.5" /> Download File
-              </a>
+                Structured Overview
+              </button>
+              <button
+                onClick={() => setResumeView('pdf')}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                  resumeView === 'pdf'
+                    ? 'bg-white text-neutral-900 font-semibold shadow-sm'
+                    : 'text-white/70 hover:text-white'
+                }`}
+              >
+                Interactive PDF Viewer
+              </button>
             </div>
 
-            {/* Summary Block */}
-            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5 text-xs text-white/80 leading-relaxed">
-              <strong className="text-white font-semibold uppercase tracking-wider text-[11px] block">Summary</strong>
-              <p>
-                Highly experienced SRE/Application Support Engineer with extensive experience in managing and automating mission-critical systems across FinTech, IT, Healthcare and Entertainment domains. Proven ability to drive continuous service improvement through proactive automation and expert L2/L3 support. Proficient in leveraging Python, Shell scripting, infrastructure-as-code, CI/CD pipelines, and rigorous adherence to ITIL practices.
-              </p>
-            </div>
+            {resumeView === 'pdf' ? (
+              /* Inline PDF Viewer */
+              <div className="w-full h-[62vh] min-h-[480px] rounded-2xl overflow-hidden border border-white/20 bg-neutral-950 shadow-inner">
+                <iframe
+                  src="/Aravindh_MS_Resume.pdf#toolbar=1"
+                  title="Aravindh MS Official Resume PDF"
+                  className="w-full h-full border-0 rounded-2xl"
+                />
+              </div>
+            ) : (
+              /* Structured Overview Content */
+              <div className="space-y-4">
+                {/* Official PDF Resume Download Banner */}
+                <div className="p-4 rounded-2xl bg-white/[0.06] border border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-xl bg-red-500/20 text-red-300">
+                      <FileText className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <strong className="text-sm font-bold text-white block">Official Resume (Aravindh MS)</strong>
+                      <span className="text-xs text-white/60 font-mono">SRE & Application Support · Chennai (PDF · 258 KB)</span>
+                    </div>
+                  </div>
+                  <a
+                    href="/Aravindh_MS_Resume.pdf"
+                    download="Aravindh_MS_Resume.pdf"
+                    className="px-4 py-2 rounded-full bg-white text-neutral-900 hover:bg-neutral-100 text-xs font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-sm self-start sm:self-auto"
+                  >
+                    <Download className="w-3.5 h-3.5" /> Download File
+                  </a>
+                </div>
+
+                {/* Formal Resume Profile */}
+                <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5 text-xs text-white/80 leading-relaxed">
+                  <strong className="text-white font-semibold uppercase tracking-wider text-[11px] block">Profile</strong>
+                  <p>
+                    Accomplished SRE and Senior Application Support Analyst with 11+ years of proven delivery across FinTech, Banking, Healthcare, and IT. Track record of driving 40% reduction in downtime through automated self-healing scripts, preemptive alert monitoring, and rigorous ITIL framework execution.
+                  </p>
+                </div>
 
             {/* Chronological Work Experience */}
             <div className="space-y-3 text-sm">
@@ -402,6 +450,8 @@ export default function Modals({ activeModal, onClose }) {
               </div>
             </div>
           </div>
+          )}
+        </div>
         )}
 
         {/* CONTACT MODAL */}

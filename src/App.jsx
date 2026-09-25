@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useFramePreloader } from './hooks/useFramePreloader';
 import CharacterCanvas from './components/CharacterCanvas';
 import HeaderNav from './components/HeaderNav';
@@ -12,7 +12,6 @@ export default function App() {
   const { isLoaded, progress, frames, centerFrame } = useFramePreloader();
   const [activeModal, setActiveModal] = useState(null);
   const [faceCoords, setFaceCoords] = useState({ x: 0, y: 0 });
-  const [scaleMode, setScaleMode] = useState('balanced'); // 'compact' | 'balanced' | 'full'
 
   const handleTabClick = (tabId) => {
     setActiveModal(tabId);
@@ -21,6 +20,17 @@ export default function App() {
   const handleCloseModal = () => {
     setActiveModal(null);
   };
+
+  // Keyboard shortcut: Escape to close any open modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && activeModal) {
+        setActiveModal(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeModal]);
 
   const handleFaceCoordsUpdate = useCallback((coords) => {
     setFaceCoords(coords);
@@ -36,7 +46,7 @@ export default function App() {
         frames={frames}
         centerFrame={centerFrame}
         isLoaded={isLoaded}
-        scaleMode={scaleMode}
+        scaleMode="balanced"
         onFaceCoordsUpdate={handleFaceCoordsUpdate}
       />
 
@@ -49,12 +59,8 @@ export default function App() {
         onOpenContact={() => setActiveModal('contact')}
       />
 
-      {/* 5. Bottom-Right Sizing Control, Telemetry & Socials */}
-      <FooterTelemetry
-        faceCoords={faceCoords}
-        scaleMode={scaleMode}
-        onScaleModeChange={setScaleMode}
-      />
+      {/* 5. Bottom-Right SRE Telemetry & Socials */}
+      <FooterTelemetry faceCoords={faceCoords} />
 
       {/* 6. Custom Glowing Magnetic Cursor */}
       <CustomCursor />

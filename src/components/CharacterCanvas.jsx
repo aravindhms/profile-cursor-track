@@ -53,6 +53,14 @@ export default function CharacterCanvas({
       mousePosRef.current.active = true;
     };
 
+    const handleTouchStart = (e) => {
+      if (e.touches && e.touches[0]) {
+        mousePosRef.current.x = e.touches[0].clientX;
+        mousePosRef.current.y = e.touches[0].clientY;
+        mousePosRef.current.active = true;
+      }
+    };
+
     const handleTouchMove = (e) => {
       if (e.touches && e.touches[0]) {
         mousePosRef.current.x = e.touches[0].clientX;
@@ -61,8 +69,17 @@ export default function CharacterCanvas({
       }
     };
 
+    const handleTouchEnd = () => {
+      // Return to gentle ambient scanning shortly after touch ends
+      setTimeout(() => {
+        mousePosRef.current.active = false;
+      }, 1800);
+    };
+
     window.addEventListener('pointermove', handlePointerMove);
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
     window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
 
     // 60 FPS Canvas Render Loop
     const render = () => {
@@ -125,7 +142,19 @@ export default function CharacterCanvas({
 
       let imageToDraw;
 
-      if (distance < deadzoneThreshold || !mousePosRef.current.active) {
+      if (!mousePosRef.current.active) {
+        // Natural ambient idle breathing/gaze when no pointer is active (mobile & idle)
+        const time = performance.now() * 0.0007; // Very gentle slow organic cycle
+        const ambientRadius = characterDim * 0.25;
+        const ambientX = faceScreenX + Math.cos(time) * ambientRadius;
+        const ambientY = faceScreenY + Math.sin(time * 0.8) * (ambientRadius * 0.5);
+        const targetAngle = Math.atan2(ambientY - faceScreenY, ambientX - faceScreenX);
+
+        smoothedAngleRef.current = lerpAngle(smoothedAngleRef.current, targetAngle, 0.06);
+        const frameIndex = angleToFrameIndex(smoothedAngleRef.current, 64);
+        imageToDraw = frames[frameIndex] || centerFrame;
+        lastDrawnFrameRef.current = frameIndex;
+      } else if (distance < deadzoneThreshold) {
         // Cursor is inside the deadzone near face -> Direct eye contact!
         isInDeadzoneRef.current = true;
         imageToDraw = centerFrame;
@@ -160,7 +189,9 @@ export default function CharacterCanvas({
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('touchstart', handleTouchStart);
       window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleTouchEnd);
       cancelAnimationFrame(animationFrameId);
     };
   }, [isLoaded, frames, centerFrame, scaleMode, onFaceCoordsUpdate]);

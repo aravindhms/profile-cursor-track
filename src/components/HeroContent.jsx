@@ -3,42 +3,49 @@ import { ArrowUpRight, MessageCircle, Download } from 'lucide-react';
 
 export default function HeroContent({ onOpenResume, onOpenContact }) {
   return (
-    <div className="fixed bottom-8 sm:bottom-12 left-6 sm:left-12 lg:left-16 z-30 max-w-[440px] pointer-events-none select-none">
-      <div className="pointer-events-auto space-y-4">
-        
-        {/* Professional Role Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-[11px] uppercase tracking-widest font-semibold text-white/95 shadow-sm transition-transform hover:scale-105">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          SRE & Application Support Engineer · Chennai
-        </div>
+    <>
+      {/* Soft Readability Ambient Cushion */}
+      <div
+        className="fixed bottom-0 left-0 w-full sm:w-[680px] h-[520px] pointer-events-none z-20 bg-gradient-to-tr from-black/50 via-black/15 to-transparent blur-3xl opacity-80"
+        aria-hidden="true"
+      />
 
-        {/* Hero Title & Script Name */}
-        <div className="space-y-0.5">
-          <p className="font-sans text-xs sm:text-sm font-semibold tracking-[0.28em] uppercase text-white/80">
-            Hi, I'm
-          </p>
-          <div className="flex items-baseline gap-3">
-            <h1
-              className="font-script text-6xl sm:text-7xl lg:text-8xl font-bold text-white tracking-normal leading-tight"
-              style={{
-                textShadow: '0 8px 30px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.25)',
-              }}
-            >
-              Aravindh
-            </h1>
-            <span className="text-xl sm:text-2xl font-mono font-bold text-white/60 tracking-wider">
-              MS
+      <div className="fixed bottom-8 sm:bottom-12 left-6 sm:left-12 lg:left-16 z-30 max-w-[460px] pointer-events-none select-none">
+        <div className="pointer-events-auto space-y-4">
+          
+          {/* Professional Role Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.12] backdrop-blur-md border border-white/20 text-[11px] uppercase tracking-widest font-semibold text-white/95 shadow-glass transition-transform hover:scale-105">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
+            SRE & Application Support Lead · Chennai
           </div>
-        </div>
 
-        {/* Summary directly from official resume */}
-        <p className="font-sans text-sm sm:text-base font-normal leading-relaxed text-white/90 max-w-[390px] drop-shadow-sm">
-          Managing and automating mission-critical systems across FinTech, Healthcare, and IT. Driving continuous service improvement through proactive automation, expert L2/L3 support, and ITIL practices.
-        </p>
+          {/* Hero Title & Modern Executive Typography */}
+          <div className="space-y-1">
+            <p className="font-sans text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-white/75">
+              Hello, I'm
+            </p>
+            <div className="flex items-baseline gap-3">
+              <h1
+                className="font-sans text-5xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-none"
+                style={{
+                  textShadow: '0 8px 32px rgba(0, 0, 0, 0.5), 0 2px 10px rgba(0, 0, 0, 0.3)',
+                }}
+              >
+                Aravindh
+              </h1>
+              <span className="text-2xl sm:text-3xl font-mono font-bold text-red-200 tracking-wider">
+                MS
+              </span>
+            </div>
+          </div>
+
+          {/* Hero Value Proposition */}
+          <p className="font-sans text-sm sm:text-base font-normal leading-relaxed text-white/95 max-w-[420px] drop-shadow-sm">
+            Architecting high-availability infrastructure and automating mission-critical production systems across FinTech and Enterprise IT with 99.99% uptime excellence.
+          </p>
 
         {/* Core Domains & Automation Highlights */}
         <div className="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-mono text-white/85">
@@ -83,8 +90,8 @@ export default function HeroContent({ onOpenResume, onOpenContact }) {
             <span>Contact</span>
           </button>
         </div>
-
       </div>
     </div>
+  </>
   );
 }

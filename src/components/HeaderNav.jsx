@@ -1,10 +1,11 @@
 import React from 'react';
-import { Briefcase, User, Mail } from 'lucide-react';
+import { Briefcase, User, FileText, Mail } from 'lucide-react';
 
 export default function HeaderNav({ activeTab, onTabClick }) {
   const navItems = [
     { id: 'work', label: 'WORK', icon: Briefcase },
     { id: 'about', label: 'ABOUT', icon: User },
+    { id: 'resume', label: 'RESUME', icon: FileText },
     { id: 'contact', label: 'CONTACT', icon: Mail },
   ];
 
