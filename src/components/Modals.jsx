@@ -4,7 +4,6 @@ import { X, ExternalLink, Mail, Copy, Check, Download, Briefcase, Code, Terminal
 export default function Modals({ activeModal, onClose }) {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
 
   if (!activeModal) return null;
 
@@ -18,15 +17,6 @@ export default function Modals({ activeModal, onClose }) {
     navigator.clipboard.writeText('+91-9840693143');
     setCopiedPhone(true);
     setTimeout(() => setCopiedPhone(false), 2000);
-  };
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setFormSubmitted(true);
-    setTimeout(() => {
-      setFormSubmitted(false);
-      onClose();
-    }, 2500);
   };
 
   return (
@@ -530,45 +520,25 @@ export default function Modals({ activeModal, onClose }) {
               </div>
             </div>
 
-            {/* Quick Note Form */}
-            {formSubmitted ? (
-              <div className="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-2">
-                <div className="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
-                  <Check className="w-5 h-5" />
-                </div>
-                <h4 className="font-semibold text-emerald-300">Message Received!</h4>
-                <p className="text-xs text-emerald-200/80">Thank you for getting in touch. Aravindh will respond promptly.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleFormSubmit} className="space-y-3 pt-1">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <input
-                    required
-                    type="text"
-                    placeholder="Your Name / Org"
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-white/50"
-                  />
-                  <input
-                    required
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-white/50"
-                  />
-                </div>
-                <textarea
-                  required
-                  rows="2"
-                  placeholder="Note regarding SRE / Application Support opportunity..."
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-white/50 resize-none"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="w-full py-2.5 rounded-full bg-white text-neutral-900 font-semibold text-sm tracking-wide shadow-luxury hover:bg-neutral-100 transition-all cursor-pointer active:scale-98"
-                >
-                  Send Direct Note
-                </button>
-              </form>
-            )}
+            {/* Direct Instant Action Buttons */}
+            <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
+              <a
+                href="mailto:aravindhms1@gmail.com?subject=Opportunity%20Discussion%20-%20Aravindh%20MS"
+                className="flex-1 py-3 px-4 rounded-xl bg-white text-neutral-900 font-semibold text-xs tracking-wide shadow-luxury hover:bg-neutral-100 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+              >
+                <Mail className="w-3.5 h-3.5 text-red-600" />
+                <span>Launch Email Client</span>
+              </a>
+              <a
+                href="https://wa.me/919840693143?text=Hi%20Aravindh,%20I%20viewed%20your%20profile%20and%20would%20like%20to%20connect."
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs tracking-wide shadow-luxury transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+              >
+                <MessageSquare className="w-3.5 h-3.5" />
+                <span>Open WhatsApp Chat</span>
+              </a>
+            </div>
           </div>
         )}
       </div>
