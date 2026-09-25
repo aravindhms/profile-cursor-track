@@ -1,10 +1,10 @@
 import React from 'react';
-import { Target, Compass, Mail } from 'lucide-react';
+import { Briefcase, User, Mail } from 'lucide-react';
 
 export default function HeaderNav({ activeTab, onTabClick }) {
   const navItems = [
-    { id: 'work', label: 'STAR STORIES', icon: Target },
-    { id: 'about', label: 'CAREER ARC', icon: Compass },
+    { id: 'work', label: 'WORK', icon: Briefcase },
+    { id: 'about', label: 'ABOUT', icon: User },
     { id: 'contact', label: 'CONTACT', icon: Mail },
   ];
 

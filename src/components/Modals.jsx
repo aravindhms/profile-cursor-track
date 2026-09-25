@@ -49,7 +49,7 @@ export default function Modals({ activeModal, onClose }) {
           <div className="space-y-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
-                <Activity className="w-3.5 h-3.5" /> Resume-Grounded STAR Stories & Tooling
+                <Activity className="w-3.5 h-3.5" /> Key Production Wins & Tooling
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold font-sans">Production Reliability & Wins</h2>
               <p className="text-white/70 text-sm mt-1">Ten years of production support, automation and reliability across FinTech, Healthcare IT and Entertainment.</p>
@@ -471,7 +471,7 @@ export default function Modals({ activeModal, onClose }) {
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
-                  <FileText className="w-3.5 h-3.5" /> Interview-Ready Cheatsheet
+                  <FileText className="w-3.5 h-3.5" /> Curriculum Vitae
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold font-sans">Aravindh MS — 10+ Yrs SRE</h2>
                 <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono text-white/70">
@@ -503,15 +503,15 @@ export default function Modals({ activeModal, onClose }) {
               </div>
             </div>
 
-            {/* Official PDF Cheatsheet Download Banner */}
+            {/* Official PDF Resume Download Banner */}
             <div className="p-4 rounded-2xl bg-white/[0.06] border border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div className="flex items-center gap-3">
                 <div className="p-2.5 rounded-xl bg-red-500/20 text-red-300">
                   <FileText className="w-5 h-5" />
                 </div>
                 <div>
-                  <strong className="text-sm font-bold text-white block">Official Interview-Ready Cheatsheet & Resume</strong>
-                  <span className="text-xs text-white/60 font-mono">10 Pages · Complete STAR Stories & Technical Deep-Dives (PDF · 9.6 MB)</span>
+                  <strong className="text-sm font-bold text-white block">Official Resume & Career Profile</strong>
+                  <span className="text-xs text-white/60 font-mono">10-Page Comprehensive Profile & Technical Deep-Dives (PDF · 9.6 MB)</span>
                 </div>
               </div>
               <a

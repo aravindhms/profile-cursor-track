@@ -52,12 +52,12 @@ export default function HeroContent({ onOpenResume, onOpenContact }) {
 
         {/* Action Pill Buttons */}
         <div className="pt-2 flex flex-wrap items-center gap-3">
-          {/* Resume & STAR Stories */}
+          {/* Resume */}
           <button
             onClick={onOpenResume}
             className="group relative px-6 py-3 rounded-full bg-white text-neutral-900 font-semibold text-sm tracking-wide shadow-luxury transition-all duration-300 hover:bg-neutral-100 hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0 active:scale-95 flex items-center gap-2 cursor-pointer"
           >
-            <span>Resume & STAR Stories</span>
+            <span>Resume</span>
             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
 
