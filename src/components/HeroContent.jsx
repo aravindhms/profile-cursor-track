@@ -1,7 +1,7 @@
 import React from 'react';
-import { ArrowUpRight, MessageCircle, Download } from 'lucide-react';
+import { ArrowUpRight, MessageCircle } from 'lucide-react';
 
-export default function HeroContent({ onOpenResume, onOpenContact }) {
+export default function HeroContent({ onOpenWork, onOpenContact }) {
   return (
     <>
       {/* Soft Readability Ambient Cushion */}
@@ -62,24 +62,14 @@ export default function HeroContent({ onOpenResume, onOpenContact }) {
 
         {/* Action Buttons */}
         <div className="pt-2 flex flex-wrap items-center gap-3">
-          {/* View Resume */}
+          {/* Explore Work */}
           <button
-            onClick={onOpenResume}
+            onClick={onOpenWork}
             className="group relative px-6 py-3 rounded-full bg-white text-neutral-900 font-semibold text-sm tracking-wide shadow-luxury transition-all duration-300 hover:bg-neutral-100 hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0 active:scale-95 flex items-center gap-2 cursor-pointer"
           >
-            <span>View Resume</span>
+            <span>Explore Work</span>
             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
-
-          {/* Quick PDF Direct Download */}
-          <a
-            href="/Aravindh_MS_Resume.pdf"
-            download="Aravindh_MS_Resume.pdf"
-            title="Download Official Resume PDF"
-            className="p-3 rounded-full bg-white/[0.08] backdrop-blur-[20px] border border-white/40 text-white hover:bg-white/20 hover:border-white/70 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all flex items-center justify-center cursor-pointer shadow-glass group"
-          >
-            <Download className="w-4 h-4 text-white/90 group-hover:scale-110 transition-transform" />
-          </a>
 
           {/* Contact */}
           <button

@@ -55,7 +55,7 @@ export default function App() {
 
       {/* 4. Bottom-Left Hero Typography & Action Pill Buttons */}
       <HeroContent
-        onOpenResume={() => setActiveModal('resume')}
+        onOpenWork={() => setActiveModal('work')}
         onOpenContact={() => setActiveModal('contact')}
       />
 
