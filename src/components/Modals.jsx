@@ -510,8 +510,8 @@ export default function Modals({ activeModal, onClose }) {
                   <FileText className="w-5 h-5" />
                 </div>
                 <div>
-                  <strong className="text-sm font-bold text-white block">Official Resume & Career Profile</strong>
-                  <span className="text-xs text-white/60 font-mono">10-Page Comprehensive Profile & Technical Deep-Dives (PDF · 9.6 MB)</span>
+                  <strong className="text-sm font-bold text-white block">Official Resume (Aravindh MS)</strong>
+                  <span className="text-xs text-white/60 font-mono">Verified Production Resume (PDF · 258 KB)</span>
                 </div>
               </div>
               <a
@@ -526,42 +526,61 @@ export default function Modals({ activeModal, onClose }) {
             <div className="space-y-4 text-sm">
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
                 <div className="flex justify-between items-baseline font-semibold">
-                  <span className="text-white text-base">Technical Lead · Production Operations</span>
-                  <span className="text-xs font-mono text-red-300">TAO</span>
+                  <span className="text-white text-base">Technical Lead</span>
+                  <span className="text-xs font-mono text-red-300">Feb 2026 – Apr 2026</span>
                 </div>
-                <p className="text-white/80 text-xs leading-relaxed">
-                  Leading production operations across payment and enterprise systems. Spearheaded incident management, root cause analysis, release governance, and cross-team reliability improvements.
+                <p className="text-xs text-white/60 font-medium">TAO Digital Solutions, Chennai</p>
+                <p className="text-white/80 text-xs leading-relaxed mt-1">
+                  Supported day-to-day SRE operations in a Healthcare IT environment adhering to compliance practices. Wrote Python scripts to automate recurring operational tasks and handled incident management in line with ITIL practices.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
                 <div className="flex justify-between items-baseline font-semibold">
-                  <span className="text-white text-base">Disaster Recovery (DR) Lead & Process Owner</span>
-                  <span className="text-xs font-mono text-red-300">Citi</span>
+                  <span className="text-white text-base">Application Support Senior Analyst</span>
+                  <span className="text-xs font-mono text-red-300">Oct 2024 – Sep 2025</span>
                 </div>
-                <p className="text-white/80 text-xs leading-relaxed">
-                  Owned the DR test plan for tier-1 applications. Sequenced live data-center failovers, met strict RTO/RPO targets, authored comprehensive SOPs, and stabilized KNIME data workflows (+20% productivity).
+                <p className="text-xs text-white/60 font-medium">Citicorp Services India Private Limited, Chennai</p>
+                <p className="text-white/80 text-xs leading-relaxed mt-1">
+                  Managed stability for complex KNIME workflows. Led daily operational coordination during release windows and high-priority incidents. Participated in BCP and disaster recovery (DR) planning, mentored junior engineers, and enhanced internal SOPs.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
                 <div className="flex justify-between items-baseline font-semibold">
-                  <span className="text-white text-base">SRE Practitioner</span>
-                  <span className="text-xs font-mono text-red-300">PagoNxt</span>
+                  <span className="text-white text-base">Senior Application Engineer</span>
+                  <span className="text-xs font-mono text-red-300">Apr 2020 – Sep 2024</span>
                 </div>
-                <p className="text-white/80 text-xs leading-relaxed">
-                  Rebuilt the monitoring and alerting layer using Datadog and Terraform, cutting incident response time by 40%. Implemented Blue-Green parallel stacks with sub-minute cutover and zero rollback anxiety.
+                <p className="text-xs text-white/60 font-medium">PagoNxt Merchant Solutions (Formerly WIRECARD), Chennai</p>
+                <p className="text-white/80 text-xs leading-relaxed mt-1">
+                  Spearheaded monitoring and alerting initiatives, reducing incident response times by 40%. Engineered deployment pipelines using Terraform and Jenkins, automated daily ops using Rundeck & Python, and directed Blue-Green deployments for Payment & Risk applications.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
                 <div className="flex justify-between items-baseline font-semibold">
-                  <span className="text-white text-base">Support & Automation Engineer</span>
-                  <span className="text-xs font-mono text-red-300">Cognizant</span>
+                  <span className="text-white text-base">Associate – Projects</span>
+                  <span className="text-xs font-mono text-red-300">Jun 2014 – Apr 2020</span>
                 </div>
-                <p className="text-white/80 text-xs leading-relaxed">
-                  24×7 batch and enterprise system monitoring. Deployed Shell/Python automation with crontab and Control-M, reducing manual support effort by 30% and repeat downtime incidents by 40%.
+                <p className="text-xs text-white/60 font-medium">Cognizant, Chennai</p>
+                <p className="text-white/80 text-xs leading-relaxed mt-1">
+                  Proactively monitored critical 24x7 jobs reducing downtime incidents by 40%. Implemented Shell/Python crontab automation reducing manual support by 30%. Improved operational performance by 30% and team productivity by 20%.
                 </p>
+              </div>
+
+              {/* Education */}
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
+                <span className="text-xs uppercase tracking-wider text-white/60 font-semibold block">Education</span>
+                <div className="space-y-1.5 text-xs">
+                  <div>
+                    <strong className="text-white font-semibold">Master of Engineering (M.E.), Computer and Communication</strong>
+                    <p className="text-white/60">Sri Sivasubramaniya Nadar (SSN) College of Engineering, Chennai · June 2014</p>
+                  </div>
+                  <div className="pt-1">
+                    <strong className="text-white font-semibold">Bachelor of Engineering (B.E.), Electronics and Communication</strong>
+                    <p className="text-white/60">SKR Engineering College, Chennai · June 2011</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
