@@ -1,9 +1,9 @@
 import React from 'react';
-import { ArrowUpRight, MessageCircle, ShieldCheck, Activity } from 'lucide-react';
+import { ArrowUpRight, MessageCircle, Download } from 'lucide-react';
 
 export default function HeroContent({ onOpenResume, onOpenContact }) {
   return (
-    <div className="fixed bottom-8 sm:bottom-12 left-6 sm:left-12 lg:left-16 z-30 max-w-[390px] pointer-events-none select-none">
+    <div className="fixed bottom-8 sm:bottom-12 left-6 sm:left-12 lg:left-16 z-30 max-w-[420px] pointer-events-none select-none">
       <div className="pointer-events-auto space-y-4">
         
         {/* Availability Badge */}
@@ -36,7 +36,7 @@ export default function HeroContent({ onOpenResume, onOpenContact }) {
         </div>
 
         {/* Compact 3-Line Bio */}
-        <p className="font-sans text-sm sm:text-base font-normal leading-relaxed text-white/90 max-w-[350px] drop-shadow-sm">
+        <p className="font-sans text-sm sm:text-base font-normal leading-relaxed text-white/90 max-w-[360px] drop-shadow-sm">
           A decade of keeping payments, healthcare, and fintech platforms running — spanning Cognizant, PagoNxt, Citi, and TAO. <span className="font-medium text-white">I automate first, escalate second.</span>
         </p>
 
@@ -52,7 +52,7 @@ export default function HeroContent({ onOpenResume, onOpenContact }) {
 
         {/* Action Pill Buttons */}
         <div className="pt-2 flex flex-wrap items-center gap-3">
-          {/* Resume (Solid White Pill with Arrow) */}
+          {/* Resume & STAR Stories */}
           <button
             onClick={onOpenResume}
             className="group relative px-6 py-3 rounded-full bg-white text-neutral-900 font-semibold text-sm tracking-wide shadow-luxury transition-all duration-300 hover:bg-neutral-100 hover:shadow-glow hover:-translate-y-0.5 active:translate-y-0 active:scale-95 flex items-center gap-2 cursor-pointer"
@@ -60,6 +60,16 @@ export default function HeroContent({ onOpenResume, onOpenContact }) {
             <span>Resume & STAR Stories</span>
             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
+
+          {/* Quick PDF Direct Download */}
+          <a
+            href="/Aravindh_MS_Resume.pdf"
+            download="Aravindh_MS_Resume.pdf"
+            title="Download Official PDF Resume"
+            className="p-3 rounded-full bg-white/[0.08] backdrop-blur-[20px] border border-white/40 text-white hover:bg-white/20 hover:border-white/70 hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all flex items-center justify-center cursor-pointer shadow-glass group"
+          >
+            <Download className="w-4 h-4 text-white/90 group-hover:scale-110 transition-transform" />
+          </a>
 
           {/* Let's Talk (Frosted Glass / White Border) */}
           <button

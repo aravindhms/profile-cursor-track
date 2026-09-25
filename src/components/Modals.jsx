@@ -484,14 +484,43 @@ export default function Modals({ activeModal, onClose }) {
                   <span>+91-9840693143</span>
                 </div>
               </div>
-              <button
-                onClick={() => {
-                  window.print();
-                }}
-                className="self-start px-4 py-2 rounded-full bg-white text-neutral-900 font-semibold text-xs flex items-center gap-2 hover:bg-white/90 transition-all cursor-pointer shadow-luxury"
+              <div className="flex items-center gap-2 self-start">
+                <a
+                  href="/Aravindh_MS_Resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-3.5 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium text-xs flex items-center gap-1.5 transition-all cursor-pointer"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" /> View PDF
+                </a>
+                <a
+                  href="/Aravindh_MS_Resume.pdf"
+                  download="Aravindh_MS_Resume.pdf"
+                  className="px-4 py-2 rounded-full bg-white text-neutral-900 font-semibold text-xs flex items-center gap-2 hover:bg-white/90 transition-all cursor-pointer shadow-luxury"
+                >
+                  <Download className="w-3.5 h-3.5" /> Download PDF
+                </a>
+              </div>
+            </div>
+
+            {/* Official PDF Cheatsheet Download Banner */}
+            <div className="p-4 rounded-2xl bg-white/[0.06] border border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-red-500/20 text-red-300">
+                  <FileText className="w-5 h-5" />
+                </div>
+                <div>
+                  <strong className="text-sm font-bold text-white block">Official Interview-Ready Cheatsheet & Resume</strong>
+                  <span className="text-xs text-white/60 font-mono">10 Pages · Complete STAR Stories & Technical Deep-Dives (PDF · 9.6 MB)</span>
+                </div>
+              </div>
+              <a
+                href="/Aravindh_MS_Resume.pdf"
+                download="Aravindh_MS_Resume.pdf"
+                className="px-4 py-2 rounded-full bg-white text-neutral-900 hover:bg-neutral-100 text-xs font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-sm self-start sm:self-auto"
               >
-                <Download className="w-3.5 h-3.5" /> Print / Save PDF
-              </button>
+                <Download className="w-3.5 h-3.5" /> Download File
+              </a>
             </div>
 
             <div className="space-y-4 text-sm">
