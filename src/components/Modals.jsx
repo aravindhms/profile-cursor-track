@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ExternalLink, Mail, Copy, Check, Download, ShieldCheck, Activity, Terminal, Layers, ArrowRight, Server, RefreshCw, FileText, Phone, MessageSquare, Code2 } from 'lucide-react';
+import { X, ExternalLink, Mail, Copy, Check, Download, Briefcase, Code, Terminal, Layers, FileText, Phone, MessageSquare, MapPin, Globe } from 'lucide-react';
 
 export default function Modals({ activeModal, onClose }) {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -44,264 +44,371 @@ export default function Modals({ activeModal, onClose }) {
           <X className="w-5 h-5" />
         </button>
 
-        {/* STAR STORIES & SRE REPOSITORIES MODAL */}
+        {/* WORK / PROFESSIONAL EXPERIENCE MODAL */}
         {activeModal === 'work' && (
           <div className="space-y-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
-                <Activity className="w-3.5 h-3.5" /> Key Production Wins & Tooling
+                <Briefcase className="w-3.5 h-3.5" /> Professional Experience
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold font-sans">Production Reliability & Wins</h2>
-              <p className="text-white/70 text-sm mt-1">Ten years of production support, automation and reliability across FinTech, Healthcare IT and Entertainment.</p>
+              <h2 className="text-2xl sm:text-3xl font-bold font-sans">Experience & Responsibilities</h2>
+              <p className="text-white/70 text-sm mt-1">Extensive track record in managing, troubleshooting, and automating mission-critical systems.</p>
             </div>
 
-            {/* Five Quantified Wins Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center pt-1">
-              <div className="p-3 rounded-2xl bg-white/[0.05] border border-white/10">
-                <span className="text-lg sm:text-xl font-bold font-mono text-emerald-400">−40%</span>
-                <p className="text-[10px] text-white/70 uppercase tracking-tight mt-0.5">Incident Response</p>
-              </div>
-              <div className="p-3 rounded-2xl bg-white/[0.05] border border-white/10">
-                <span className="text-lg sm:text-xl font-bold font-mono text-emerald-400">−40%</span>
-                <p className="text-[10px] text-white/70 uppercase tracking-tight mt-0.5">Downtime Incidents</p>
-              </div>
-              <div className="p-3 rounded-2xl bg-white/[0.05] border border-white/10">
-                <span className="text-lg sm:text-xl font-bold font-mono text-emerald-400">−30%</span>
-                <p className="text-[10px] text-white/70 uppercase tracking-tight mt-0.5">Manual Support</p>
-              </div>
-              <div className="p-3 rounded-2xl bg-white/[0.05] border border-white/10">
-                <span className="text-lg sm:text-xl font-bold font-mono text-emerald-400">+30%</span>
-                <p className="text-[10px] text-white/70 uppercase tracking-tight mt-0.5">Ops Performance</p>
-              </div>
-              <div className="p-3 rounded-2xl bg-white/[0.05] border border-white/10 col-span-2 sm:col-span-1">
-                <span className="text-lg sm:text-xl font-bold font-mono text-emerald-400">+20%</span>
-                <p className="text-[10px] text-white/70 uppercase tracking-tight mt-0.5">Team Productivity</p>
-              </div>
-            </div>
-
-            {/* Resume Stories */}
-            <div className="space-y-4 pt-2">
-              <h4 className="text-xs uppercase tracking-widest text-white/60 font-semibold">Core Production Wins</h4>
-              
-              {/* Story 1 */}
-              <div className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-all space-y-3">
-                <div className="flex items-center justify-between">
+            <div className="space-y-4">
+              {/* Role 1: TAO */}
+              <div className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <div>
-                    <span className="text-xs uppercase tracking-wider text-red-300 font-semibold">PagoNxt · Payments Platform</span>
-                    <h3 className="text-lg font-bold">The 40% Response-Time Rescue</h3>
+                    <h3 className="text-base font-bold text-white">Technical Lead</h3>
+                    <p className="text-xs text-white/60 font-medium">TAO Digital Solutions, Chennai</p>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-mono text-xs font-semibold">
-                    −40% Response
-                  </span>
+                  <span className="text-xs font-mono text-red-300">February 2026 – April 2026</span>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-white/80">
-                  <div className="p-2.5 rounded-xl bg-white/[0.03]">
-                    <strong className="text-red-200">Situation:</strong> Payment platform incidents surfaced late; alerts reached on-call engineers after customer impact spread.
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-white/[0.03]">
-                    <strong className="text-red-200">Action:</strong> Rebuilt monitoring and alerting layer, tied alerts to payment-path components, and embedded runbooks in alert payloads.
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 pt-1">
-                  <span className="text-[11px] font-mono text-white/60">Stack:</span>
-                  {['Datadog', 'Terraform', 'Blue-Green', 'Runbooks', 'ITIL'].map(t => (
-                    <span key={t} className="px-2 py-0.5 rounded-md bg-white/10 text-[10px] font-mono text-white/80">{t}</span>
+                <ul className="text-xs text-white/80 space-y-1.5 list-disc list-inside leading-relaxed pt-1">
+                  <li>Supported day-to-day SRE operations in a Healthcare IT environment, adhering to domain-specific compliance and data handling practices.</li>
+                  <li>Wrote Python scripts to automate recurring operational tasks, reducing manual effort for the team.</li>
+                  <li>Handled incident management activities including triaging, tracking, and resolving production issues in line with ITIL practices.</li>
+                </ul>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {['Healthcare IT', 'Python Automation', 'ITIL Practices', 'SRE Operations'].map((tag) => (
+                    <span key={tag} className="px-2 py-0.5 rounded bg-white/10 text-[10px] font-mono text-white/70">{tag}</span>
                   ))}
                 </div>
               </div>
 
-              {/* Story 2 */}
-              <div className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-all space-y-3">
-                <div className="flex items-center justify-between">
+              {/* Role 2: Citi */}
+              <div className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <div>
-                    <span className="text-xs uppercase tracking-wider text-red-300 font-semibold">PagoNxt · Release Engineering</span>
-                    <h3 className="text-lg font-bold">Blue-Green Confidence</h3>
+                    <h3 className="text-base font-bold text-white">Application Support Senior Analyst</h3>
+                    <p className="text-xs text-white/60 font-medium">Citicorp Services India Private Limited, Chennai</p>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 font-mono text-xs font-semibold">
-                    &lt; 1 min Rollback
-                  </span>
+                  <span className="text-xs font-mono text-red-300">October 2024 – September 2025</span>
                 </div>
-                <p className="text-xs text-white/80 leading-relaxed">
-                  Introduced parallel Blue-Green deployment stacks with atomic router traffic switching. Replaced high-drama release windows with smoke-tested cutovers and single go/no-go ownership, making rollbacks reversible in minutes.
-                </p>
-                <div className="flex items-center gap-2 pt-1">
-                  <span className="text-[11px] font-mono text-white/60">Stack:</span>
-                  {['Router / Load Balancer', 'Blue-Green Stacks', 'Automated Smoke Tests'].map(t => (
-                    <span key={t} className="px-2 py-0.5 rounded-md bg-white/10 text-[10px] font-mono text-white/80">{t}</span>
+                <ul className="text-xs text-white/80 space-y-1.5 list-disc list-inside leading-relaxed pt-1">
+                  <li>Managed and validated stability for complex KNIME workflows, handling job scheduling and error resolution.</li>
+                  <li>Provided deployment support and troubleshooting for Appian-based applications.</li>
+                  <li>Led daily operational coordination during release windows and high-priority incidents, ensuring smooth handoffs.</li>
+                  <li>Participated in business continuity and disaster recovery (DR) planning to ensure application resilience.</li>
+                  <li>Mentored junior engineers and enhanced internal SOPs and documentation.</li>
+                  <li>Efficiently handled user service requests (access provisioning, data fetch) adhering to ITIL practices.</li>
+                </ul>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {['KNIME Workflows', 'Appian', 'BCP & DR Planning', 'Release Coordination', 'SOPs', 'ITIL'].map((tag) => (
+                    <span key={tag} className="px-2 py-0.5 rounded bg-white/10 text-[10px] font-mono text-white/70">{tag}</span>
                   ))}
                 </div>
               </div>
 
-              {/* Story 3 */}
-              <div className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 hover:border-white/20 transition-all space-y-3">
-                <div className="flex items-center justify-between">
+              {/* Role 3: PagoNxt */}
+              <div className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
                   <div>
-                    <span className="text-xs uppercase tracking-wider text-red-300 font-semibold">Citi · Production Resilience</span>
-                    <h3 className="text-lg font-bold">DR Test Day Lead</h3>
+                    <h3 className="text-base font-bold text-white">Senior Application Engineer</h3>
+                    <p className="text-xs text-white/60 font-medium">PagoNxt Merchant Solutions (Formerly WIRECARD), Chennai</p>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 font-mono text-xs font-semibold">
-                    Zero-Surprise DR
-                  </span>
+                  <span className="text-xs font-mono text-red-300">April 2020 – September 2024</span>
                 </div>
-                <p className="text-xs text-white/80 leading-relaxed">
-                  Led end-to-end disaster recovery failover exercises across active data-centres. Refreshed runbooks, sequenced DNS and database cutover, rehearsed application bring-up, and verified RTO/RPO targets within the agreed change window.
-                </p>
-                <div className="flex items-center gap-2 pt-1">
-                  <span className="text-[11px] font-mono text-white/60">Stack:</span>
-                  {['BCP / DR Planning', 'RTO / RPO Targets', 'KNIME', 'DC Operations'].map(t => (
-                    <span key={t} className="px-2 py-0.5 rounded-md bg-white/10 text-[10px] font-mono text-white/80">{t}</span>
+                <ul className="text-xs text-white/80 space-y-1.5 list-disc list-inside leading-relaxed pt-1">
+                  <li>Spearheaded monitoring and alerting initiatives, reducing production incident response times by 40%.</li>
+                  <li>Engineered semi-automated deployment pipelines using Terraform and Jenkins, improving deployment speed and consistency.</li>
+                  <li>Coordinated with Data Center (DC) operations for disaster recovery testing and traffic management.</li>
+                  <li>Automated daily operational activities using Rundeck and Python scripts, improving service delivery efficiency.</li>
+                  <li>Directed deployment and release activities, applying Blue-Green deployment strategy and coordinating with release management for post-deployment validations.</li>
+                  <li>Provided L2/L3 support for Payment & Risk applications, investigating issues by analyzing API calls, database logs, and Control-M output.</li>
+                  <li>Assisted in cloud migration efforts by providing deployment assistance for key applications moving to Azure platforms.</li>
+                </ul>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {['Datadog', 'Terraform', 'Jenkins', 'Rundeck', 'Python', 'Blue-Green', 'Control-M', 'Azure Migration'].map((tag) => (
+                    <span key={tag} className="px-2 py-0.5 rounded bg-white/10 text-[10px] font-mono text-white/70">{tag}</span>
                   ))}
                 </div>
               </div>
-            </div>
 
-            {/* Verified SRE & Production GitHub Repositories */}
-            <div className="space-y-3 pt-2">
-              <div className="flex items-center justify-between">
-                <h4 className="text-xs uppercase tracking-widest text-white/60 font-semibold flex items-center gap-1.5">
-                  <Code2 className="w-3.5 h-3.5 text-red-300" /> SRE & Operations Open-Source Tooling
-                </h4>
-                <a
-                  href="https://github.com/aravindhms"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-[11px] font-mono text-red-300 hover:text-white flex items-center gap-1"
-                >
-                  <span>github.com/aravindhms</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
+              {/* Role 4: Cognizant */}
+              <div className="p-5 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                  <div>
+                    <h3 className="text-base font-bold text-white">Associate – Projects</h3>
+                    <p className="text-xs text-white/60 font-medium">Cognizant, Chennai</p>
+                  </div>
+                  <span className="text-xs font-mono text-red-300">June 2014 – April 2020</span>
+                </div>
+                <ul className="text-xs text-white/80 space-y-1.5 list-disc list-inside leading-relaxed pt-1">
+                  <li>Improved system reliability by proactively monitoring critical 24x7 jobs, successfully reducing downtime incidents by 40%.</li>
+                  <li>Drove operational efficiency by implementing automation functionalities using Shell/Python scripts and scheduling crontab jobs, which reduced manual support activities by 30%.</li>
+                  <li>Recognized for innovative problem-solving skills, implementing solutions that improved operational performance by 30% and boosted team productivity by 20%.</li>
+                  <li>Conducted Root Cause Analysis (RCA) on production issues and developed new application functionalities using Python, Informix, Unix, Shell Scripting, and SQL.</li>
+                  <li>Prepared project closure documents, including weekly status, monthly status, and KPI metrics reports.</li>
+                </ul>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {['24x7 Job Monitoring', 'Shell / Python Automation', 'crontab', 'Informix', 'Unix', 'SQL', 'RCA'].map((tag) => (
+                    <span key={tag} className="px-2 py-0.5 rounded bg-white/10 text-[10px] font-mono text-white/70">{tag}</span>
+                  ))}
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {[
-                  {
-                    name: 'sd-dashboard',
-                    title: 'SRE & Support Telemetry Dashboard',
-                    desc: 'Real-time dashboard for Production Support and SRE teams to monitor system health, active incidents, and KPIs.',
-                    lang: 'JavaScript',
-                    link: 'https://github.com/aravindhms/sd-dashboard',
-                  },
-                  {
-                    name: 'prod-support-automation-pack',
-                    title: 'Production Support Automation Pack',
-                    desc: 'Automated operational scripts for batch monitoring, auto-recovery routines, and routine task elimination.',
-                    lang: 'Python / Shell',
-                    link: 'https://github.com/aravindhms/prod-support-automation-pack',
-                  },
-                  {
-                    name: 'terminaldecoder',
-                    title: 'Terminal Command Decoder',
-                    desc: 'Instant syntax and flag analyzer for Unix, Git, Terraform, Docker, and Kubernetes command-line tools.',
-                    lang: 'JavaScript / DevOps',
-                    link: 'https://github.com/aravindhms/terminaldecoder',
-                  },
-                  {
-                    name: 'unixutils',
-                    title: 'Unix Sandbox & Operations Toolkit',
-                    desc: 'Browser-based developer sandbox for rapid regex verification, command prototyping, and log parsing workflows.',
-                    lang: 'JavaScript / Shell',
-                    link: 'https://github.com/aravindhms/unixutils',
-                  }
-                ].map((repo) => (
+              {/* Open-Source SRE Tools on GitHub */}
+              <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3 pt-4">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-xs uppercase tracking-widest text-white/70 font-semibold flex items-center gap-1.5">
+                    <Terminal className="w-3.5 h-3.5 text-red-300" /> SRE & Operations Open-Source Tools
+                  </h4>
                   <a
-                    key={repo.name}
-                    href={repo.link}
+                    href="https://github.com/aravindhms"
                     target="_blank"
                     rel="noreferrer"
-                    className="p-4 rounded-xl bg-white/[0.04] border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-all flex flex-col justify-between group cursor-pointer"
+                    className="text-[11px] font-mono text-red-300 hover:text-white flex items-center gap-1"
                   >
-                    <div>
-                      <div className="flex items-center justify-between text-xs font-mono">
-                        <span className="font-bold text-white group-hover:text-red-300 transition-colors flex items-center gap-1">
-                          {repo.name}
-                        </span>
-                        <ExternalLink className="w-3 h-3 text-white/50 group-hover:text-white transition-colors" />
-                      </div>
-                      <p className="text-[11px] text-white/60 font-medium mt-0.5">{repo.title}</p>
-                      <p className="text-xs text-white/80 mt-1.5 leading-relaxed">{repo.desc}</p>
-                    </div>
-                    <div className="pt-2">
-                      <span className="px-2 py-0.5 rounded bg-white/10 text-[10px] font-mono text-white/70">
-                        {repo.lang}
-                      </span>
-                    </div>
+                    <span>github.com/aravindhms</span>
+                    <ExternalLink className="w-3 h-3" />
                   </a>
-                ))}
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {[
+                    {
+                      name: 'sd-dashboard',
+                      desc: 'Real-time dashboard for Production Support & SRE teams to monitor system health, incidents, and KPIs.',
+                      link: 'https://github.com/aravindhms/sd-dashboard',
+                    },
+                    {
+                      name: 'prod-support-automation-pack',
+                      desc: 'Python & Shell scripts automating batch monitoring, auto-recovery routines, and routine support tasks.',
+                      link: 'https://github.com/aravindhms/prod-support-automation-pack',
+                    },
+                    {
+                      name: 'terminaldecoder',
+                      desc: 'Command syntax & flag analyzer for Unix, Git, Terraform, Docker, and Kubernetes.',
+                      link: 'https://github.com/aravindhms/terminaldecoder',
+                    },
+                    {
+                      name: 'unixutils',
+                      desc: 'Browser-based Unix sandbox & operational developer toolkit for regex testing and triage.',
+                      link: 'https://github.com/aravindhms/unixutils',
+                    }
+                  ].map((r) => (
+                    <a
+                      key={r.name}
+                      href={r.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-3 rounded-xl bg-white/[0.04] border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-all flex flex-col justify-between group"
+                    >
+                      <div>
+                        <span className="font-mono text-xs font-bold text-white group-hover:text-red-300 transition-colors flex items-center justify-between">
+                          {r.name}
+                          <ExternalLink className="w-3 h-3 text-white/40 group-hover:text-white transition-colors" />
+                        </span>
+                        <p className="text-[11px] text-white/70 mt-1 leading-relaxed">{r.desc}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-
           </div>
         )}
 
-        {/* CAREER ARC / ABOUT MODAL */}
+        {/* ABOUT & SKILLS MODAL */}
         {activeModal === 'about' && (
           <div className="space-y-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
-                <Terminal className="w-3.5 h-3.5" /> Career Narrative & Positioning
+                <Code className="w-3.5 h-3.5" /> Professional Profile & Skills
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold font-sans">A Decade of Systems Reliability</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold font-sans">Summary & Core Competencies</h2>
             </div>
 
-            {/* Core Pitch Quote */}
-            <div className="p-4 rounded-2xl bg-white/[0.06] border border-white/15 italic text-white/90 text-sm leading-relaxed">
-              "I'm a production operations engineer with 10+ years keeping payments, healthcare and entertainment platforms up — from 24×7 monitoring at Cognizant to Blue-Green releases at PagoNxt and DR planning at Citi. <strong className="text-white not-italic">I automate first, escalate second.</strong>"
+            {/* Official Summary */}
+            <div className="p-4 rounded-2xl bg-white/[0.05] border border-white/15 text-white/90 text-sm leading-relaxed space-y-2">
+              <span className="text-xs uppercase tracking-widest text-white/50 font-semibold block font-mono">Summary</span>
+              <p>
+                Highly experienced SRE/Application Support Engineer with extensive experience in managing and automating mission-critical systems across FinTech, IT, Healthcare and Entertainment domains. Proven ability to drive continuous service improvement through proactive automation and expert L2/L3 support. Proficient in leveraging Python, Shell scripting, infrastructure-as-code, CI/CD pipelines, and rigorous adherence to ITIL practices.
+              </p>
             </div>
 
-            {/* The 4-Stop Career Arc */}
+            {/* Structured Skills Matrix straight from Resume */}
             <div className="space-y-3 pt-1">
-              <h4 className="text-xs uppercase tracking-widest text-white/60 font-semibold">The Career Arc — One Sentence Per Stop</h4>
-              
+              <h4 className="text-xs uppercase tracking-widest text-white/60 font-semibold">Technical Skills</h4>
               <div className="space-y-2.5">
                 {[
-                  {
-                    company: 'TAO',
-                    role: 'Technical Lead',
-                    desc: 'Production operations leadership, incident escalation governance, and cross-functional reliability ownership.'
-                  },
-                  {
-                    company: 'Citi',
-                    role: 'Process Owner',
-                    desc: 'BCP/DR planning lead, runbook refresh, junior mentoring, and KNIME workflow stabilization (+20% team productivity).'
-                  },
-                  {
-                    company: 'PagoNxt',
-                    role: 'SRE Practitioner',
-                    desc: 'Overhauled monitoring & alerting layer (−40% response time), managed Blue-Green cutovers with Datadog and Terraform.'
-                  },
-                  {
-                    company: 'Cognizant',
-                    role: 'Support Engineer',
-                    desc: '24×7 job monitoring and Shell/Python automation with crontab (−30% manual effort, −40% downtime incidents).'
-                  }
-                ].map((stop) => (
-                  <div key={stop.company} className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <strong className="text-sm font-bold text-white">{stop.company}</strong>
-                        <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 text-red-300 font-mono">{stop.role}</span>
-                      </div>
-                      <p className="text-xs text-white/75 mt-1">{stop.desc}</p>
-                    </div>
+                  { category: 'Automation / Scripting', items: 'Python, UNIX Shell, crontab, Rundeck, Control-M' },
+                  { category: 'Monitoring / Logging', items: 'Datadog, Kibana (ELK), Splunk' },
+                  { category: 'Platform / Tools', items: 'ServiceNow, BMC Remedy, JIRA, Tableau, Power BI, Knime' },
+                  { category: 'Cloud / DevOps', items: 'Azure (Migration Support), Terraform, Jenkins, CI/CD, Confluence' },
+                  { category: 'Standards / OS', items: 'ITIL (Incident, Change, Problem, Request Management), Linux/Unix, Windows' },
+                ].map((s) => (
+                  <div key={s.category} className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
+                    <span className="text-xs font-semibold text-red-300 block mb-1">{s.category}</span>
+                    <p className="text-xs font-mono text-white/90">{s.items}</p>
                   </div>
                 ))}
-              </div>
-
-              <div className="p-3 rounded-xl bg-white/[0.02] border border-white/5 text-[11px] font-mono text-white/70 text-center">
-                Support Engineer → SRE Practitioner → Process Owner → Technical Lead
               </div>
             </div>
 
-            {/* Technical Tooling */}
-            <div className="space-y-3 pt-2">
-              <h4 className="text-xs uppercase tracking-widest text-white/60 font-semibold">Production Tooling & Systems</h4>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
-                {['Datadog / Splunk / ELK', 'Terraform (IaC)', 'Control-M / Rundeck', 'Python / Shell Scripts', 'Blue-Green Deployment', 'BCP / Disaster Recovery', 'SLO / SLI / Error Budgets', 'ITIL Incident & Problem', 'AWS / Cloud Infrastructure'].map((item) => (
-                  <div key={item} className="p-2.5 rounded-xl bg-white/[0.05] border border-white/10 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-red-400"></span>
-                    <span className="font-mono text-[11px]">{item}</span>
+            {/* Education */}
+            <div className="space-y-3 pt-1">
+              <h4 className="text-xs uppercase tracking-widest text-white/60 font-semibold">Education</h4>
+              <div className="space-y-2">
+                <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
+                  <div className="flex justify-between items-baseline font-semibold text-xs text-white">
+                    <span>Master of Engineering (M.E.), Computer and Communication</span>
+                    <span className="text-xs font-mono text-red-300">June 2014</span>
                   </div>
-                ))}
+                  <p className="text-xs text-white/60 mt-0.5">Sri Sivasubramaniya Nadar (SSN) College of Engineering, Chennai</p>
+                </div>
+                <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
+                  <div className="flex justify-between items-baseline font-semibold text-xs text-white">
+                    <span>Bachelor of Engineering (B.E.), Electronics and Communication</span>
+                    <span className="text-xs font-mono text-red-300">June 2011</span>
+                  </div>
+                  <p className="text-xs text-white/60 mt-0.5">SKR Engineering College, Chennai</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Personal Details & Languages */}
+            <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-red-300" />
+                <span className="text-white/80">Location: <strong className="text-white">Gowrivakkam, Chennai - 600073</strong></span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Globe className="w-3.5 h-3.5 text-red-300" />
+                <span className="text-white/80">Languages: <strong className="text-white">English, Tamil, Malayalam</strong></span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* RESUME MODAL */}
+        {activeModal === 'resume' && (
+          <div className="space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
+                  <FileText className="w-3.5 h-3.5" /> Official Resume
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold font-sans">Aravindh MS</h2>
+                <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono text-white/70">
+                  <a href="mailto:aravindhms1@gmail.com" className="hover:text-white underline">aravindhms1@gmail.com</a>
+                  <span>•</span>
+                  <a href="https://www.linkedin.com/in/aravindhms/" target="_blank" rel="noreferrer" className="hover:text-white underline">linkedin.com/in/aravindhms</a>
+                  <span>•</span>
+                  <a href="https://github.com/aravindhms" target="_blank" rel="noreferrer" className="hover:text-white underline">github.com/aravindhms</a>
+                  <span>•</span>
+                  <span>+91-9840693143</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 self-start">
+                <a
+                  href="/Aravindh_MS_Resume.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-3.5 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium text-xs flex items-center gap-1.5 transition-all cursor-pointer"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" /> View PDF
+                </a>
+                <a
+                  href="/Aravindh_MS_Resume.pdf"
+                  download="Aravindh_MS_Resume.pdf"
+                  className="px-4 py-2 rounded-full bg-white text-neutral-900 font-semibold text-xs flex items-center gap-2 hover:bg-white/90 transition-all cursor-pointer shadow-luxury"
+                >
+                  <Download className="w-3.5 h-3.5" /> Download PDF
+                </a>
+              </div>
+            </div>
+
+            {/* Official PDF Resume Download Banner */}
+            <div className="p-4 rounded-2xl bg-white/[0.06] border border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-red-500/20 text-red-300">
+                  <FileText className="w-5 h-5" />
+                </div>
+                <div>
+                  <strong className="text-sm font-bold text-white block">Official Resume (Aravindh MS)</strong>
+                  <span className="text-xs text-white/60 font-mono">SRE & Application Support · Chennai (PDF · 258 KB)</span>
+                </div>
+              </div>
+              <a
+                href="/Aravindh_MS_Resume.pdf"
+                download="Aravindh_MS_Resume.pdf"
+                className="px-4 py-2 rounded-full bg-white text-neutral-900 hover:bg-neutral-100 text-xs font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-sm self-start sm:self-auto"
+              >
+                <Download className="w-3.5 h-3.5" /> Download File
+              </a>
+            </div>
+
+            {/* Summary Block */}
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5 text-xs text-white/80 leading-relaxed">
+              <strong className="text-white font-semibold uppercase tracking-wider text-[11px] block">Summary</strong>
+              <p>
+                Highly experienced SRE/Application Support Engineer with extensive experience in managing and automating mission-critical systems across FinTech, IT, Healthcare and Entertainment domains. Proven ability to drive continuous service improvement through proactive automation and expert L2/L3 support. Proficient in leveraging Python, Shell scripting, infrastructure-as-code, CI/CD pipelines, and rigorous adherence to ITIL practices.
+              </p>
+            </div>
+
+            {/* Chronological Work Experience */}
+            <div className="space-y-3 text-sm">
+              <strong className="text-white font-semibold uppercase tracking-wider text-xs block text-white/70">Professional Experience</strong>
+              
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
+                <div className="flex justify-between items-baseline font-semibold">
+                  <span className="text-white text-base">Technical Lead</span>
+                  <span className="text-xs font-mono text-red-300">Feb 2026 – Apr 2026</span>
+                </div>
+                <p className="text-xs text-white/60 font-medium">TAO Digital Solutions, Chennai</p>
+                <p className="text-white/80 text-xs leading-relaxed mt-1">
+                  Supported day-to-day SRE operations in a Healthcare IT environment adhering to compliance practices. Wrote Python scripts to automate recurring operational tasks and handled incident management in line with ITIL practices.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
+                <div className="flex justify-between items-baseline font-semibold">
+                  <span className="text-white text-base">Application Support Senior Analyst</span>
+                  <span className="text-xs font-mono text-red-300">Oct 2024 – Sep 2025</span>
+                </div>
+                <p className="text-xs text-white/60 font-medium">Citicorp Services India Private Limited, Chennai</p>
+                <p className="text-white/80 text-xs leading-relaxed mt-1">
+                  Managed stability for complex KNIME workflows. Led daily operational coordination during release windows and high-priority incidents. Participated in BCP and disaster recovery (DR) planning, mentored junior engineers, and enhanced internal SOPs.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
+                <div className="flex justify-between items-baseline font-semibold">
+                  <span className="text-white text-base">Senior Application Engineer</span>
+                  <span className="text-xs font-mono text-red-300">Apr 2020 – Sep 2024</span>
+                </div>
+                <p className="text-xs text-white/60 font-medium">PagoNxt Merchant Solutions (Formerly WIRECARD), Chennai</p>
+                <p className="text-white/80 text-xs leading-relaxed mt-1">
+                  Spearheaded monitoring and alerting initiatives, reducing incident response times by 40%. Engineered deployment pipelines using Terraform and Jenkins, automated daily ops using Rundeck & Python, and directed Blue-Green deployments for Payment & Risk applications.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
+                <div className="flex justify-between items-baseline font-semibold">
+                  <span className="text-white text-base">Associate – Projects</span>
+                  <span className="text-xs font-mono text-red-300">Jun 2014 – Apr 2020</span>
+                </div>
+                <p className="text-xs text-white/60 font-medium">Cognizant, Chennai</p>
+                <p className="text-white/80 text-xs leading-relaxed mt-1">
+                  Proactively monitored critical 24x7 jobs reducing downtime incidents by 40%. Implemented Shell/Python crontab automation reducing manual support by 30%. Improved operational performance by 30% and team productivity by 20%.
+                </p>
+              </div>
+
+              {/* Education */}
+              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
+                <strong className="text-white font-semibold uppercase tracking-wider text-xs block text-white/70">Education</strong>
+                <div className="space-y-1.5 text-xs">
+                  <div>
+                    <strong className="text-white font-semibold">Master of Engineering (M.E.), Computer and Communication</strong>
+                    <p className="text-white/60">Sri Sivasubramaniya Nadar (SSN) College of Engineering, Chennai · June 2014</p>
+                  </div>
+                  <div className="pt-1">
+                    <strong className="text-white font-semibold">Bachelor of Engineering (B.E.), Electronics and Communication</strong>
+                    <p className="text-white/60">SKR Engineering College, Chennai · June 2011</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -312,10 +419,10 @@ export default function Modals({ activeModal, onClose }) {
           <div className="space-y-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
-                <Mail className="w-3.5 h-3.5" /> Direct Contact Channels
+                <Mail className="w-3.5 h-3.5" /> Direct Contact
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold font-sans">Connect with Aravindh MS</h2>
-              <p className="text-white/70 text-sm mt-1">Available for SRE Leadership, Technical Lead, and Production Operations opportunities.</p>
+              <p className="text-white/70 text-sm mt-1">Available for SRE Leadership, Technical Lead, and Application Support opportunities.</p>
             </div>
 
             {/* Contact Channels Grid */}
@@ -327,7 +434,7 @@ export default function Modals({ activeModal, onClose }) {
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-white/50 block font-mono">Email Address</span>
+                    <span className="text-[10px] uppercase tracking-wider text-white/50 block font-mono">Email</span>
                     <a href="mailto:aravindhms1@gmail.com" className="text-sm font-mono text-white/95 hover:text-white hover:underline">
                       aravindhms1@gmail.com
                     </a>
@@ -351,7 +458,7 @@ export default function Modals({ activeModal, onClose }) {
                     </svg>
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-white/50 block font-mono">LinkedIn Profile</span>
+                    <span className="text-[10px] uppercase tracking-wider text-white/50 block font-mono">LinkedIn</span>
                     <span className="text-sm font-mono text-white/95">linkedin.com/in/aravindhms</span>
                   </div>
                 </div>
@@ -375,7 +482,7 @@ export default function Modals({ activeModal, onClose }) {
                     </svg>
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-white/50 block font-mono">GitHub Repositories</span>
+                    <span className="text-[10px] uppercase tracking-wider text-white/50 block font-mono">GitHub</span>
                     <span className="text-sm font-mono text-white/95">github.com/aravindhms</span>
                   </div>
                 </div>
@@ -399,7 +506,7 @@ export default function Modals({ activeModal, onClose }) {
                     </svg>
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-white/50 block font-mono">WhatsApp Phone</span>
+                    <span className="text-[10px] uppercase tracking-wider text-white/50 block font-mono">WhatsApp</span>
                     <span className="text-sm font-mono text-white/95">+91-9840693143</span>
                   </div>
                 </div>
@@ -451,7 +558,7 @@ export default function Modals({ activeModal, onClose }) {
                 <textarea
                   required
                   rows="2"
-                  placeholder="Note regarding SRE / Production Lead opportunity..."
+                  placeholder="Note regarding SRE / Application Support opportunity..."
                   className="w-full px-4 py-2.5 rounded-xl bg-white/[0.06] border border-white/15 text-sm text-white placeholder-white/40 focus:outline-none focus:border-white/50 resize-none"
                 ></textarea>
                 <button
@@ -462,127 +569,6 @@ export default function Modals({ activeModal, onClose }) {
                 </button>
               </form>
             )}
-          </div>
-        )}
-
-        {/* RESUME / CHEATSHEET MODAL */}
-        {activeModal === 'resume' && (
-          <div className="space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
-                  <FileText className="w-3.5 h-3.5" /> Curriculum Vitae
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold font-sans">Aravindh MS — 10+ Yrs SRE</h2>
-                <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono text-white/70">
-                  <a href="mailto:aravindhms1@gmail.com" className="hover:text-white underline">aravindhms1@gmail.com</a>
-                  <span>•</span>
-                  <a href="https://www.linkedin.com/in/aravindhms/" target="_blank" rel="noreferrer" className="hover:text-white underline">linkedin.com/in/aravindhms</a>
-                  <span>•</span>
-                  <a href="https://github.com/aravindhms" target="_blank" rel="noreferrer" className="hover:text-white underline">github.com/aravindhms</a>
-                  <span>•</span>
-                  <span>+91-9840693143</span>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 self-start">
-                <a
-                  href="/Aravindh_MS_Resume.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="px-3.5 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium text-xs flex items-center gap-1.5 transition-all cursor-pointer"
-                >
-                  <ExternalLink className="w-3.5 h-3.5" /> View PDF
-                </a>
-                <a
-                  href="/Aravindh_MS_Resume.pdf"
-                  download="Aravindh_MS_Resume.pdf"
-                  className="px-4 py-2 rounded-full bg-white text-neutral-900 font-semibold text-xs flex items-center gap-2 hover:bg-white/90 transition-all cursor-pointer shadow-luxury"
-                >
-                  <Download className="w-3.5 h-3.5" /> Download PDF
-                </a>
-              </div>
-            </div>
-
-            {/* Official PDF Resume Download Banner */}
-            <div className="p-4 rounded-2xl bg-white/[0.06] border border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-red-500/20 text-red-300">
-                  <FileText className="w-5 h-5" />
-                </div>
-                <div>
-                  <strong className="text-sm font-bold text-white block">Official Resume (Aravindh MS)</strong>
-                  <span className="text-xs text-white/60 font-mono">Verified Production Resume (PDF · 258 KB)</span>
-                </div>
-              </div>
-              <a
-                href="/Aravindh_MS_Resume.pdf"
-                download="Aravindh_MS_Resume.pdf"
-                className="px-4 py-2 rounded-full bg-white text-neutral-900 hover:bg-neutral-100 text-xs font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-sm self-start sm:self-auto"
-              >
-                <Download className="w-3.5 h-3.5" /> Download File
-              </a>
-            </div>
-
-            <div className="space-y-4 text-sm">
-              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
-                <div className="flex justify-between items-baseline font-semibold">
-                  <span className="text-white text-base">Technical Lead</span>
-                  <span className="text-xs font-mono text-red-300">Feb 2026 – Apr 2026</span>
-                </div>
-                <p className="text-xs text-white/60 font-medium">TAO Digital Solutions, Chennai</p>
-                <p className="text-white/80 text-xs leading-relaxed mt-1">
-                  Supported day-to-day SRE operations in a Healthcare IT environment adhering to compliance practices. Wrote Python scripts to automate recurring operational tasks and handled incident management in line with ITIL practices.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
-                <div className="flex justify-between items-baseline font-semibold">
-                  <span className="text-white text-base">Application Support Senior Analyst</span>
-                  <span className="text-xs font-mono text-red-300">Oct 2024 – Sep 2025</span>
-                </div>
-                <p className="text-xs text-white/60 font-medium">Citicorp Services India Private Limited, Chennai</p>
-                <p className="text-white/80 text-xs leading-relaxed mt-1">
-                  Managed stability for complex KNIME workflows. Led daily operational coordination during release windows and high-priority incidents. Participated in BCP and disaster recovery (DR) planning, mentored junior engineers, and enhanced internal SOPs.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
-                <div className="flex justify-between items-baseline font-semibold">
-                  <span className="text-white text-base">Senior Application Engineer</span>
-                  <span className="text-xs font-mono text-red-300">Apr 2020 – Sep 2024</span>
-                </div>
-                <p className="text-xs text-white/60 font-medium">PagoNxt Merchant Solutions (Formerly WIRECARD), Chennai</p>
-                <p className="text-white/80 text-xs leading-relaxed mt-1">
-                  Spearheaded monitoring and alerting initiatives, reducing incident response times by 40%. Engineered deployment pipelines using Terraform and Jenkins, automated daily ops using Rundeck & Python, and directed Blue-Green deployments for Payment & Risk applications.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
-                <div className="flex justify-between items-baseline font-semibold">
-                  <span className="text-white text-base">Associate – Projects</span>
-                  <span className="text-xs font-mono text-red-300">Jun 2014 – Apr 2020</span>
-                </div>
-                <p className="text-xs text-white/60 font-medium">Cognizant, Chennai</p>
-                <p className="text-white/80 text-xs leading-relaxed mt-1">
-                  Proactively monitored critical 24x7 jobs reducing downtime incidents by 40%. Implemented Shell/Python crontab automation reducing manual support by 30%. Improved operational performance by 30% and team productivity by 20%.
-                </p>
-              </div>
-
-              {/* Education */}
-              <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-2">
-                <span className="text-xs uppercase tracking-wider text-white/60 font-semibold block">Education</span>
-                <div className="space-y-1.5 text-xs">
-                  <div>
-                    <strong className="text-white font-semibold">Master of Engineering (M.E.), Computer and Communication</strong>
-                    <p className="text-white/60">Sri Sivasubramaniya Nadar (SSN) College of Engineering, Chennai · June 2014</p>
-                  </div>
-                  <div className="pt-1">
-                    <strong className="text-white font-semibold">Bachelor of Engineering (B.E.), Electronics and Communication</strong>
-                    <p className="text-white/60">SKR Engineering College, Chennai · June 2011</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         )}
       </div>

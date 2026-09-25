@@ -1,4 +1,4 @@
-# Aravindh MS — Interactive SRE & Production Operations Portfolio
+# Aravindh MS — Interactive SRE & Application Support Portfolio
 
 An award-winning luxury portfolio hero section with ultra-smooth, zero-lag, zero-ghosting cursor-tracking character animation.
 
@@ -21,7 +21,8 @@ Built with **React 19**, **Vite**, **Tailwind CSS**, and an optimized **60 FPS C
 5. **Interactive Controls & Telemetry:**
    - Scale Mode Selector: `Compact` (65%), `Balanced` (78% default), and `Full` (100% cover).
    - Floating frosted-glass navigation pill (`backdrop-filter: blur(20px)`).
-   - Resume-grounded STAR Stories modal featuring the Five Numbers (`−40%`, `−40%`, `−30%`, `+30%`, `+20%`).
+   - Official 3-Page Resume modal with direct PDF download and in-browser preview.
+   - Verified Open-Source SRE Tools from GitHub (`sd-dashboard`, `prod-support-automation-pack`, `terminaldecoder`, `unixutils`).
    - Direct contact channels for Email, LinkedIn, WhatsApp, and GitHub.
    - Glowing magnetic cursor with trailing ring and interactive hover expansion.
 
@@ -62,8 +63,9 @@ npm run build
 ## 👤 Profile & Contacts
 
 - **Name:** Aravindh MS
-- **Role:** Technical Lead · SRE & Production Operations
+- **Role:** Technical Lead · SRE & Application Support Engineer
+- **Location:** Gowrivakkam, Chennai - 600073
 - **Email:** [aravindhms1@gmail.com](mailto:aravindhms1@gmail.com)
 - **LinkedIn:** [linkedin.com/in/aravindhms](https://www.linkedin.com/in/aravindhms/)
-- **WhatsApp:** [+91-9840693143](https://wa.me/919840693143)
+- **WhatsApp / Phone:** [+91-9840693143](https://wa.me/919840693143)
 - **GitHub:** [github.com/aravindhms](https://github.com/aravindhms)

@@ -33,10 +33,10 @@ export default function FooterTelemetry({ faceCoords, scaleMode, onScaleModeChan
       <div className="pointer-events-auto flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.08] backdrop-blur-[20px] border border-white/20 text-xs font-mono text-white/80 shadow-glass transition-all hover:bg-white/[0.12] hover:border-white/30">
         <span className="flex items-center gap-1.5 text-white/95">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-          <span className="text-[11px] tracking-wider uppercase font-semibold">99.99% Reliability</span>
+          <span className="text-[11px] tracking-wider uppercase font-semibold">SRE & Application Support</span>
         </span>
         <span className="h-3 w-px bg-white/20"></span>
-        <span className="text-[10px] text-white/70">60 FPS · Zero-Lag Lerp</span>
+        <span className="text-[10px] text-white/70">60 FPS Gaze</span>
       </div>
 
       {/* Social & Contact links pill */}
