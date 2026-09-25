@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Loader({ progress }) {
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#d21d18] text-white select-none transition-opacity duration-700">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0d0f12] text-white select-none transition-opacity duration-700">
       <div className="flex flex-col items-center max-w-xs w-full px-6 space-y-6">
         {/* Luxury Monogram */}
         <div className="relative flex items-center justify-center">

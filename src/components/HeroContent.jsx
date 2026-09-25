@@ -36,7 +36,7 @@ export default function HeroContent({ onOpenWork, onOpenContact }) {
               >
                 Aravindh
               </h1>
-              <span className="text-2xl sm:text-3xl font-mono font-bold text-red-200 tracking-wider">
+              <span className="text-2xl sm:text-3xl font-mono font-bold text-emerald-400 tracking-wider">
                 MS
               </span>
             </div>

@@ -39,7 +39,7 @@ export default function Modals({ activeModal, onClose }) {
         {activeModal === 'work' && (
           <div className="space-y-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
                 <Briefcase className="w-3.5 h-3.5" /> Professional Experience
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold font-sans">Experience & Responsibilities</h2>
@@ -54,7 +54,7 @@ export default function Modals({ activeModal, onClose }) {
                     <h3 className="text-base font-bold text-white">Technical Lead</h3>
                     <p className="text-xs text-white/60 font-medium">TAO Digital Solutions, Chennai</p>
                   </div>
-                  <span className="text-xs font-mono text-red-300">February 2026 – April 2026</span>
+                  <span className="text-xs font-mono text-emerald-400">February 2026 – April 2026</span>
                 </div>
                 <ul className="text-xs text-white/80 space-y-1.5 list-disc list-inside leading-relaxed pt-1">
                   <li>Supported day-to-day SRE operations in a Healthcare IT environment, adhering to domain-specific compliance and data handling practices.</li>
@@ -75,7 +75,7 @@ export default function Modals({ activeModal, onClose }) {
                     <h3 className="text-base font-bold text-white">Application Support Senior Analyst</h3>
                     <p className="text-xs text-white/60 font-medium">Citicorp Services India Private Limited, Chennai</p>
                   </div>
-                  <span className="text-xs font-mono text-red-300">October 2024 – September 2025</span>
+                  <span className="text-xs font-mono text-emerald-400">October 2024 – September 2025</span>
                 </div>
                 <ul className="text-xs text-white/80 space-y-1.5 list-disc list-inside leading-relaxed pt-1">
                   <li>Managed and validated stability for complex KNIME workflows, handling job scheduling and error resolution.</li>
@@ -99,7 +99,7 @@ export default function Modals({ activeModal, onClose }) {
                     <h3 className="text-base font-bold text-white">Senior Application Engineer</h3>
                     <p className="text-xs text-white/60 font-medium">PagoNxt Merchant Solutions (Formerly WIRECARD), Chennai</p>
                   </div>
-                  <span className="text-xs font-mono text-red-300">April 2020 – September 2024</span>
+                  <span className="text-xs font-mono text-emerald-400">April 2020 – September 2024</span>
                 </div>
                 <ul className="text-xs text-white/80 space-y-1.5 list-disc list-inside leading-relaxed pt-1">
                   <li>Spearheaded monitoring and alerting initiatives, reducing production incident response times by 40%.</li>
@@ -124,7 +124,7 @@ export default function Modals({ activeModal, onClose }) {
                     <h3 className="text-base font-bold text-white">Associate – Projects</h3>
                     <p className="text-xs text-white/60 font-medium">Cognizant, Chennai</p>
                   </div>
-                  <span className="text-xs font-mono text-red-300">June 2014 – April 2020</span>
+                  <span className="text-xs font-mono text-emerald-400">June 2014 – April 2020</span>
                 </div>
                 <ul className="text-xs text-white/80 space-y-1.5 list-disc list-inside leading-relaxed pt-1">
                   <li>Improved system reliability by proactively monitoring critical 24x7 jobs, successfully reducing downtime incidents by 40%.</li>
@@ -144,13 +144,13 @@ export default function Modals({ activeModal, onClose }) {
               <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3 pt-4">
                 <div className="flex items-center justify-between">
                   <h4 className="text-xs uppercase tracking-widest text-white/70 font-semibold flex items-center gap-1.5">
-                    <Terminal className="w-3.5 h-3.5 text-red-300" /> SRE & Operations Open-Source Tools
+                    <Terminal className="w-3.5 h-3.5 text-emerald-400" /> SRE & Operations Open-Source Tools
                   </h4>
                   <a
                     href="https://github.com/aravindhms"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[11px] font-mono text-red-300 hover:text-white flex items-center gap-1"
+                    className="text-[11px] font-mono text-emerald-400 hover:text-white flex items-center gap-1"
                   >
                     <span>github.com/aravindhms</span>
                     <ExternalLink className="w-3 h-3" />
@@ -191,7 +191,7 @@ export default function Modals({ activeModal, onClose }) {
                       className="p-3 rounded-xl bg-white/[0.04] border border-white/10 hover:border-white/30 hover:bg-white/[0.08] transition-all flex flex-col justify-between group"
                     >
                       <div>
-                        <span className="font-mono text-xs font-bold text-white group-hover:text-red-300 transition-colors flex items-center justify-between">
+                        <span className="font-mono text-xs font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center justify-between">
                           {r.name}
                           <ExternalLink className="w-3 h-3 text-white/40 group-hover:text-white transition-colors" />
                         </span>
@@ -216,7 +216,7 @@ export default function Modals({ activeModal, onClose }) {
         {activeModal === 'about' && (
           <div className="space-y-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
                 <Code className="w-3.5 h-3.5" /> Professional Profile & Skills
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold font-sans">Summary & Core Competencies</h2>
@@ -224,7 +224,7 @@ export default function Modals({ activeModal, onClose }) {
 
             {/* Differentiated Engineering Philosophy */}
             <div className="p-4 rounded-2xl bg-white/[0.05] border border-white/15 text-white/90 text-sm leading-relaxed space-y-2">
-              <span className="text-xs uppercase tracking-widest text-red-300 font-semibold block font-mono">Philosophy & Focus</span>
+              <span className="text-xs uppercase tracking-widest text-emerald-400 font-semibold block font-mono">Philosophy & Focus</span>
               <p>
                 Specialized in mission-critical reliability, zero-downtime operations, automated incident triage, and continuous service resilience across FinTech and enterprise architectures. Championing "automate once, protect forever", combining ITIL rigor with modern Cloud, Datadog/Splunk telemetry, and Infrastructure-as-Code tooling.
               </p>
@@ -242,7 +242,7 @@ export default function Modals({ activeModal, onClose }) {
                   { category: 'Standards / OS', items: 'ITIL (Incident, Change, Problem, Request Management), Linux/Unix, Windows' },
                 ].map((s) => (
                   <div key={s.category} className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
-                    <span className="text-xs font-semibold text-red-300 block mb-1">{s.category}</span>
+                    <span className="text-xs font-semibold text-emerald-400 block mb-1">{s.category}</span>
                     <p className="text-xs font-mono text-white/90">{s.items}</p>
                   </div>
                 ))}
@@ -256,14 +256,14 @@ export default function Modals({ activeModal, onClose }) {
                 <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
                   <div className="flex justify-between items-baseline font-semibold text-xs text-white">
                     <span>Master of Engineering (M.E.), Computer and Communication</span>
-                    <span className="text-xs font-mono text-red-300">June 2014</span>
+                    <span className="text-xs font-mono text-emerald-400">June 2014</span>
                   </div>
                   <p className="text-xs text-white/60 mt-0.5">Sri Sivasubramaniya Nadar (SSN) College of Engineering, Chennai</p>
                 </div>
                 <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
                   <div className="flex justify-between items-baseline font-semibold text-xs text-white">
                     <span>Bachelor of Engineering (B.E.), Electronics and Communication</span>
-                    <span className="text-xs font-mono text-red-300">June 2011</span>
+                    <span className="text-xs font-mono text-emerald-400">June 2011</span>
                   </div>
                   <p className="text-xs text-white/60 mt-0.5">SKR Engineering College, Chennai</p>
                 </div>
@@ -273,11 +273,11 @@ export default function Modals({ activeModal, onClose }) {
             {/* Personal Details & Languages */}
             <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-red-300" />
+                <MapPin className="w-3.5 h-3.5 text-emerald-400" />
                 <span className="text-white/80">Location: <strong className="text-white">Gowrivakkam, Chennai - 600073</strong></span>
               </div>
               <div className="flex items-center gap-2">
-                <Globe className="w-3.5 h-3.5 text-red-300" />
+                <Globe className="w-3.5 h-3.5 text-emerald-400" />
                 <span className="text-white/80">Languages: <strong className="text-white">English, Tamil, Malayalam</strong></span>
               </div>
             </div>
@@ -289,7 +289,7 @@ export default function Modals({ activeModal, onClose }) {
           <div className="space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
                   <FileText className="w-3.5 h-3.5" /> Official Resume
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold font-sans">Aravindh MS</h2>
@@ -361,7 +361,7 @@ export default function Modals({ activeModal, onClose }) {
                 {/* Official PDF Resume Download Banner */}
                 <div className="p-4 rounded-2xl bg-white/[0.06] border border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-red-500/20 text-red-300">
+                    <div className="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400">
                       <FileText className="w-5 h-5" />
                     </div>
                     <div>
@@ -393,7 +393,7 @@ export default function Modals({ activeModal, onClose }) {
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
                 <div className="flex justify-between items-baseline font-semibold">
                   <span className="text-white text-base">Technical Lead</span>
-                  <span className="text-xs font-mono text-red-300">Feb 2026 – Apr 2026</span>
+                  <span className="text-xs font-mono text-emerald-400">Feb 2026 – Apr 2026</span>
                 </div>
                 <p className="text-xs text-white/60 font-medium">TAO Digital Solutions, Chennai</p>
                 <p className="text-white/80 text-xs leading-relaxed mt-1">
@@ -404,7 +404,7 @@ export default function Modals({ activeModal, onClose }) {
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
                 <div className="flex justify-between items-baseline font-semibold">
                   <span className="text-white text-base">Application Support Senior Analyst</span>
-                  <span className="text-xs font-mono text-red-300">Oct 2024 – Sep 2025</span>
+                  <span className="text-xs font-mono text-emerald-400">Oct 2024 – Sep 2025</span>
                 </div>
                 <p className="text-xs text-white/60 font-medium">Citicorp Services India Private Limited, Chennai</p>
                 <p className="text-white/80 text-xs leading-relaxed mt-1">
@@ -415,7 +415,7 @@ export default function Modals({ activeModal, onClose }) {
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
                 <div className="flex justify-between items-baseline font-semibold">
                   <span className="text-white text-base">Senior Application Engineer</span>
-                  <span className="text-xs font-mono text-red-300">Apr 2020 – Sep 2024</span>
+                  <span className="text-xs font-mono text-emerald-400">Apr 2020 – Sep 2024</span>
                 </div>
                 <p className="text-xs text-white/60 font-medium">PagoNxt Merchant Solutions (Formerly WIRECARD), Chennai</p>
                 <p className="text-white/80 text-xs leading-relaxed mt-1">
@@ -426,7 +426,7 @@ export default function Modals({ activeModal, onClose }) {
               <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 space-y-1.5">
                 <div className="flex justify-between items-baseline font-semibold">
                   <span className="text-white text-base">Associate – Projects</span>
-                  <span className="text-xs font-mono text-red-300">Jun 2014 – Apr 2020</span>
+                  <span className="text-xs font-mono text-emerald-400">Jun 2014 – Apr 2020</span>
                 </div>
                 <p className="text-xs text-white/60 font-medium">Cognizant, Chennai</p>
                 <p className="text-white/80 text-xs leading-relaxed mt-1">
@@ -458,7 +458,7 @@ export default function Modals({ activeModal, onClose }) {
         {activeModal === 'contact' && (
           <div className="space-y-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-red-300 mb-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-2">
                 <Mail className="w-3.5 h-3.5" /> Direct Contact
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold font-sans">Connect with Aravindh MS</h2>
@@ -470,7 +470,7 @@ export default function Modals({ activeModal, onClose }) {
               {/* Email */}
               <div className="p-3.5 rounded-2xl bg-white/[0.06] border border-white/15 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-xl bg-red-500/20 text-red-300">
+                  <div className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { lerpAngle, angleToFrameIndex } from '../utils/math';
 
-const BG_COLOR = '#d21d18';
+const BG_COLOR = '#0d0f12';
 const FACE_X_PCT = 0.50; // Face horizontal center in video frame (50%)
 const FACE_Y_PCT = 0.41; // Face vertical center (eyes/bridge) in video frame (41%)
 const DEADZONE_RADIUS_PCT = 0.12; // 12% radius for center eye-contact

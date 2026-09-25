@@ -16,7 +16,7 @@ export default function FooterTelemetry({ faceCoords }) {
         </span>
         <span className="h-3 w-px bg-white/20"></span>
         <span className="text-[10px] text-white/70 flex items-center gap-1">
-          <MapPin className="w-3 h-3 text-red-300" /> Chennai
+          <MapPin className="w-3 h-3 text-emerald-400" /> Chennai
         </span>
       </div>
 
@@ -69,7 +69,7 @@ export default function FooterTelemetry({ faceCoords }) {
           href="mailto:aravindhms1@gmail.com"
           aria-label="Direct Email"
           title="Email: aravindhms1@gmail.com"
-          className="p-2 rounded-full hover:bg-white/15 hover:text-red-300 transition-all cursor-pointer"
+          className="p-2 rounded-full hover:bg-white/15 hover:text-emerald-400 transition-all cursor-pointer"
         >
           <Mail className="w-4 h-4" />
         </a>

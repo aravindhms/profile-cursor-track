@@ -37,7 +37,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-[#d21d18] text-white select-none">
+    <div className="relative w-screen h-screen overflow-hidden bg-[#0d0f12] text-white select-none">
       {/* 1. Loading splash screen until 64 frames + center are fully preloaded */}
       {!isLoaded && <Loader progress={progress} />}
 
